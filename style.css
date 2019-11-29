@@ -9,5 +9,27 @@
     color: #000;
 }
 
+.container {
+    background-image: url("../Code-Quiz/images/dark-honeycomb.png");
+    min-width: 100%;
+    min-height: 100%;
+   
+}
 
+
+.header1 {
+    color: antiquewhite;
+    padding: 3% 41.75%;
+    
+}
+
+.header2 {
+    color: antiquewhite;
+    padding: 5% 15%;
+}
+
+.answers {
+    color: antiquewhite;
+    padding: 3% 5%;
+}
 
