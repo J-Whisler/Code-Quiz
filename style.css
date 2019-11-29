@@ -28,7 +28,7 @@ body.correct {
 }
 
 body.incorrect {
-    --hue: v
+    --hue: var(--hue-incorrect)
 }
 
 .container {
@@ -41,4 +41,18 @@ body.incorrect {
     
 }
 
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    border: 1px solid black;
+    background-color:lightgrey;
+    --hue: var(--hue-nuetral);
+    background-color: hsl(var(--hue), 100%, 50%);
+    
+}
 
