@@ -5,5 +5,9 @@
 .card-body {
     display: inline-block;
     font-size: 200%;
+    background-color: #C96130;
+    color: #000;
 }
+
+
 
