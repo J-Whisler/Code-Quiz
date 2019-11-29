@@ -1,35 +1,25 @@
-.card {
-    text-align: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.card-body {
-    display: inline-block;
-    font-size: 200%;
-    background-color: #C96130;
-    color: #000;
+:root {
+    --hue-nuetral: 200;
+    --hue-incorrect: 0;
+    --hue-correct: 145;
 }
 
-.container {
-    background-image: url("../Code-Quiz/images/dark-honeycomb.png");
-    min-width: 100%;
-    min-height: 100%;
-   
-}
-
-
-.header1 {
-    color: antiquewhite;
-    padding: 3% 41.75%;
-    
-}
-
-.header2 {
-    color: antiquewhite;
-    padding: 5% 15%;
-}
-
-.answers {
-    color: antiquewhite;
-    padding: 3% 5%;
+body {
+    --hue: var(--hue-nuetral);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
 }
 
