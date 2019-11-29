@@ -1,44 +1,9 @@
-.container {
-    background-image: url("./beige-tiles.png");
-    width: 100%;
+.card {
+    text-align: center;
 }
 
-.navbar-brand {
-    margin: 0% 42%;
-    
+.card-body {
+    display: inline-block;
+    font-size: 200%;
 }
 
-.content {
-    color: black;
-    margin: 10% 40%;
-    width: 100%;
-}
-
-.text {
-    margin: 4% 4%;
-}
-
-.charNumber {
-    margin: 4% 25%;
-}
-
-.buttons {
-    margin: 2% 17%;
-}
-
-.p1 {
-    width: 100%;
-    margin-right: 200px;
-
-}
-
-.checkbox {
-    margin: 0% 25%;
-}
-
-.password {
-    margin: 2% 16%;
-}
-h4 {
-    margin: 0% 20%;
-}
