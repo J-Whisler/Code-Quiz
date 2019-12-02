@@ -53,6 +53,38 @@ body.incorrect {
     background-color:lightgrey;
     --hue: var(--hue-nuetral);
     background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
     
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.incorrect {
+    --hue: var(--hue-incorrect)
+}
+
+.start-btn {
+    font-size: 100px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
 
