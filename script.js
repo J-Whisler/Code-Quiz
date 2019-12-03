@@ -1,5 +1,7 @@
 var startBtn = document.querySelector('#start-btn')
 var questContainEl = document.querySelector('#question-container')
+var questionEl = document.querySelector('#question')
+var answerBtnsEl =document.querySelector('#answer-btns')
 
 var shuffeledQuestions; 
 var currentQuestionsInsex;
@@ -16,6 +18,11 @@ function startGame() {
 }
 
 function nextQuestion () {
+    
+
+}
+
+function currentQuestion (question) {
 
 }
 
