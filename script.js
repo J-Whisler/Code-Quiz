@@ -2,9 +2,9 @@
 var startBtn = document.querySelector('#start-btn')
 var questContainEl = document.querySelector('#question-container')
 var questionEl = document.querySelector('#question')
-var answerBtnsEl =document.querySelector('#answer-btns')
+var answerBtnsEl = document.querySelector('#answer-btns')
 
-// variable set as undefined to be used to shuffle the order of the questions
+// variables set as undefined to be used to shuffle the order of the questions
 var shuffeledQuestions; 
 var currentQuestionsInsex;
 
@@ -27,18 +27,53 @@ function startGame() {
 
 // create function to make questions appear on the screen
 function nextQuestion () {
+    // calling reset function
+    reset()
 
-    currentQuestion(shuffeledQuestions[currentQuestionsInsex])
+    // calling currentQuestion function that will use the shuffeledQuestions variable and the currentQuestionsIndex to produce the next question on the screen
+    currentQuestion(shuffeledQuestions[currentQuestionsIndex])
+
+    
 
 }
 
 // create currentQuestion function with question parameter
 function currentQuestion (question) {
     // set the text content of the question element
-    questionEl.textContent = question.question
+    questionEl.innerText = question.question
+    // loop through different questions answers
+    question.answers.forEach(function answer () {
+        // creates button for each different answer
+        var button = document.createElement('button')
+        // will set the text of the button to the text of the answers from questions.js
+        button.innerText = answer.text
+        // add the btn class to all the newly created button elements
+        button.classList.add('btn')
+        // checking to see if the answer is correct
+        if (answer.correct) {
+            // add a data attribute to the button element and sets the attribute to correct if it is the correct answer to the question
+            button.dataset.correct = answer.correct
+        }
+        // add event listener to thw newly created button elements, used as parameter in selectAnswer function
+        button.addEventListener('click', selectAnswer)
+        // appends the button we just created to the answerbtnsEl
+        answerBtnsEl.appendChild(button)
+    })
 }
 
-function selectAnswer () {
-    
+// creating reset function to remove original answer button elements to be replaced by answer buttons containing answer text
+function reset () {
+    // while loop to loop through all chidren for answerBtnsEl
+    while (answerBtnsEl.firstChild) {
+        // if there is a child inside the answer button element, this will remove it
+        answerBtnsEl.removeChild
+        (answerBtnsEl.firstChild)
+    }
 }
+
+function selectAnswer (event) {
+
+}
+
+
 

@@ -40,12 +40,12 @@ var questions = [
     },
 
     {
-        question: 'How do you declare a variable (ES5)?',
-        anwers: [
-            {text: var myVariable = 'This is my variable', correct: true},
-            {text: myVariable = 'This is my variable', correct: false},
-            {text: declare myVariable = 'This is my variable', correct: false},
-            {text: variable myVariable = 'This is my variable', correct: false}
+        question: 'How would you declare a variable (ES5)?',
+        answers: [
+            {text: 'var myVariable = "This is my variable"', correct: true},
+            {text: 'myVariable = "This is my variable"', correct: false},
+            {text: 'declare myVariable = "This is my variable"', correct: false},
+            {text: 'variable myVariable = "This is my variable"', correct: false}
         ]
     }
 
