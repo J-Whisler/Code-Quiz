@@ -18,7 +18,7 @@ function startGame() {
     // this will sort the questions using math.random to give us a number between 0 and 1, -.5 to give us a 50/50 chance of getting a number above 0 and a 50/50 chance of getting a number below 0, thus giving us a random array of questions.
     shuffeledQuestions = questions.sort(function() {Math.random() -.5})
     // setting the currentQuestionIndex to 0 so it knows to start on the first item in the shuffled array.
-    currentQuestionsInsex = 0;
+    currentQuestionsIndex = 0;
     // this will remove the 'hide class' from the question container element, thus making the question appear on the screen after the user clicks the start button, and the start button disappears
     questContainEl.classList.remove('hide')
     // this calls the nextQuestion function
@@ -36,5 +36,9 @@ function nextQuestion () {
 function currentQuestion (question) {
     // set the text content of the question element
     questionEl.textContent = question.question
+}
+
+function selectAnswer () {
+    
 }
 

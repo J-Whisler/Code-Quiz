@@ -15,7 +15,7 @@ var questions = [
             {text: 'At the bottom of the <body>', correct: true},
             {text: 'At the top of the <body>', correct: false},
             {text: 'Below the closing </body> tag', correct: false},
-            {text: 'Above the opening <head> tag'}
+            {text: 'Above the opening <head> tag', correct: false}
         ]
     },
 
