@@ -21,15 +21,20 @@ function startGame() {
     currentQuestionsInsex = 0;
     // this will remove the 'hide class' from the question container element, thus making the question appear on the screen after the user clicks the start button, and the start button disappears
     questContainEl.classList.remove('hide')
+    // this calls the nextQuestion function
     nextQuestion()
 }
 
+// create function to make questions appear on the screen
 function nextQuestion () {
-    
+
+    currentQuestion(shuffeledQuestions[currentQuestionsInsex])
 
 }
 
+// create currentQuestion function with question parameter
 function currentQuestion (question) {
-
+    // set the text content of the question element
+    questionEl.textContent = question.question
 }
 

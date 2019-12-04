@@ -30,6 +30,12 @@ body.correct {
 body.incorrect {
     --hue: var(--hue-incorrect)
 }
+.timer {
+    color: black;
+    font-size: 40px;
+    margin: auto auto;
+    float: right;
+}
 
 .container {
     width: 800px;
