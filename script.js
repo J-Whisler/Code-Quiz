@@ -71,7 +71,20 @@ function reset () {
     }
 }
 
+// selectAnswer fucntion
 function selectAnswer (event) {
+    // variable for whichever button we select
+    var selectedButton = event.target
+    // checks if the answer selected was the correct answer using the dataset of correct
+    var correct = selectedButton.dataset.correct
+    // sets status class of body whether it should be set to correct or incorrect
+    setStatusClass(document.body, correct)
+    // loops through all other buttons and sets the status class for those buttons
+    // converts to an array so we can use it with the forEach
+    Array.from(answerBtnsEl.children).forEach(function button () {
+        // sets status class based on if the answer is correct or incorrect
+        setStatusClass(button, button.dataset.correct)
+    })
 
 }
 
