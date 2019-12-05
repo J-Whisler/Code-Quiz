@@ -1,55 +1,57 @@
 var questions = [
     {
-        question: 'What does DOM stand for?',
-        answers: [
-            {text: 'Document Object Model', correct: true},
-            {text: 'Desktop Operation Manager', correct: false},
-            {text: 'Document Oreientanted Machine', correct: false},
-            {text: 'Definitive Object Module', correct: false}
-        ]
+        title: 'What does DOM stand for?',
+        choices: [
+            'Document Object Model', 
+            'Deskop Operation Manager', 
+            'Document Oreientanted Machine',
+            'Definitive Object Module',
+        ],
+        answer: 'Document Object Model'
     },
 
     {
-        question: 'Where in your index.html should you put the link to your javascript file?',
-        answers: [
-            {text: 'At the bottom of the <body>', correct: true},
-            {text: 'At the top of the <body>', correct: false},
-            {text: 'Below the closing </body> tag', correct: false},
-            {text: 'Above the opening <head> tag', correct: false}
-        ]
+        title: 'Where in your index.html should you put the link to your javascript file?',
+        choices: [
+             'At the bottom of the <body>',
+             'At the top of the <body>',
+             'Below the closing </body> tag',
+             'Above the opening <head> tag', 
+        ],
+        answer: 'At the bottom of the <body>'
     },
 
     {
-            question: 'What is a boolean?',
-            answers: [
-                {text: 'True or False', correct: true},
-                {text: 'A number', correct: false},
-                {text: 'A set of characters or words between quotation marks', correct: false},
-                {text: 'A ghost with one leg', correct: false}
-            ]
+            title: 'What is a boolean?',
+            choices: [
+                'True or False',
+                'A number',
+                'A set of characters or words between quotation marks',
+                'A ghost with one leg',
+            ],
+            answer: 'True or False'
     },
 
     {
-        question: 'How do you comment out a single line of code in Javascript?',
-        answers: [
-            {text: '// this is a comment', correct: true},
-            {text: '/ this is a commnet', correct: false},
-            {text: '<!-- this is a comment -->', correct: false},
-            {text: '... this is a comment ...', correct: false}
-        ]
+        title: 'How do you comment out a single line of code in Javascript?',
+        choices: [
+            '// this is a comment',
+            '/ this is a commnet',
+            '<!-- this is a comment -->',
+            '... this is a comment ...',
+        ],
+        answer: '// this is a comment'
     },
 
     {
-        question: 'How would you declare a variable (ES5)?',
-        answers: [
-            {text: 'var myVariable = "This is my variable"', correct: true},
-            {text: 'myVariable = "This is my variable"', correct: false},
-            {text: 'declare myVariable = "This is my variable"', correct: false},
-            {text: 'variable myVariable = "This is my variable"', correct: false}
-        ]
+        title: 'How would you declare a variable (ES5)?',
+        choicess: [
+            'var myVariable = "This is my variable"',
+             'myVariable = "This is my variable"',
+             'declare myVariable = "This is my variable"',
+             'variable myVariable = "This is my variable"',
+        ],
+        answer: 'var myVariable = "This is my variable"'
     }
 
 ]
-
-
-  

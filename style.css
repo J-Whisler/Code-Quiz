@@ -5,14 +5,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-:root {
-    --hue-nuetral: 200;
-    --hue-incorrect: 0;
-    --hue-correct: 145;
-}
+
 
 body {
-    --hue: var(--hue-nuetral);
+    background-image: url('../Code-Quiz/images/dark-honeycomb.png');
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,16 +16,22 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
+    
 }
 
-body.correct {
-    --hue: var(--hue-correct);
+.header {
+    position: absolute;
+    top: 0;
+    color: white;
 }
 
-body.incorrect {
-    --hue: var(--hue-incorrect)
+.h3 {
+    margin: 20px 45px;
+
 }
+
+
+
 .timer {
     color: black;
     font-size: 25px;
@@ -43,7 +45,7 @@ body.incorrect {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px 2px;
+    box-shadow: 0 0 10px 15px;
     
 }
 
@@ -61,12 +63,13 @@ body.incorrect {
     background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: black
     
 }
 
 .btn:hover {
-    border-color: black;
+    border-color: green;
+    color: red;
 }
 
 .btn.correct {
