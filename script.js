@@ -6,8 +6,10 @@ var answerBtnsEl = document.querySelector('#answer-btns')
 var timerEl = document.querySelector('#timer')
 var headerEl = document.querySelector('#header')
 var answerTextEl = document.querySelector('#answer-text')
+
 var time = 75;
 var step = 0;
+
 var btn1 = document.querySelector('#btn1')
 var btn2 = document.querySelector('#btn2')
 var btn3 = document.querySelector('#btn3')
@@ -33,7 +35,7 @@ function startGame() {
     // this will remove the 'hide class' from the question container element, thus making the question appear on the screen after the user clicks the start button, and the start button disappears
     questContainEl.classList.remove('hide')
     // this calls the nextQuestion function
-    nextQuestion()
+    // nextQuestion()
     // calls the timer function
     timer()
     // hides the header text when start button is pushed
@@ -47,14 +49,14 @@ function startGame() {
 }
 
 // create function to make questions appear on the screen
-function nextQuestion () {
+// function nextQuestion () {
     
-    // calling currentQuestion function that will use the shuffeledQuestions variable and the currentQuestionsIndex to produce the next question on the screen
-    currentQuestion(shuffeledQuestions[currentQuestionsIndex])
+//     // calling currentQuestion function that will use the shuffeledQuestions variable and the currentQuestionsIndex to produce the next question on the screen
+//     currentQuestion(shuffeledQuestions[currentQuestionsIndex])
 
     
 
-}
+// }
 
 function anotherQ () {
     if (step === 5) {
@@ -117,42 +119,54 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
 
 
 
-// selectAnswer function
-// function selectAnswer () {
+
 
     btn1.addEventListener('click', function () {
         if (questions[step].choices[0] !== questions[step].answer) {
             time = time - 15
         }
         step++
+        refresh()
     })
 
     btn2.addEventListener('click', function() {
-        if (questions[step].choice[1] !== quesitions[step].answer) {
+        if (questions[step].choices[1] !== questions[step].answer) {
             time = time - 15
         }
         step++
+        refresh()
     })
     btn3.addEventListener('click', function() {
         if (questions[step].choices[2] !== questions[step].answer) {
             time = time - 15
         }
         step++
+        refresh()
     })
     btn4.addEventListener('click', function () {
         if (questions[step].choices[3] !== questions[step].answer) {
             time = time - 15
         }
         step++
+        refresh()
     
-// }
+
     })
 
+    function refresh () {
+        if (step === 0) {
+            end()
+        } else {
+            questionEl.textContent = questions[step].title
+            btn1.textContent = questions[step].choices[0]
+            btn2.textContent = questions[step].choices[1]
+            btn3.textContent = questions[step].choices[2]
+            btn4.textContent = questions[step].choices[3]
+        }
+    }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('incorrect')
-}
+
+
 
 function timer () {
     timer = setInterval(function() {

@@ -45,7 +45,7 @@ var questions = [
 
     {
         title: 'How would you declare a variable (ES5)?',
-        choicess: [
+        choices: [
             'var myVariable = "This is my variable"',
              'myVariable = "This is my variable"',
              'declare myVariable = "This is my variable"',
