@@ -43,24 +43,11 @@ function startGame() {
     // makes answer text appear when start button is pushed
     answerTextEl.classList.remove('hide')
 
-
-    
-
 }
-
-// create function to make questions appear on the screen
-// function nextQuestion () {
-    
-//     // calling currentQuestion function that will use the shuffeledQuestions variable and the currentQuestionsIndex to produce the next question on the screen
-//     currentQuestion(shuffeledQuestions[currentQuestionsIndex])
-
-    
-
-// }
 
 function anotherQ () {
     if (step === 5) {
-        finish ()
+        endGame ()
     } else {
         questionEl.innerHTML = questions[step].title
         btn1.innerHTML = questions[step].choices[0]
@@ -115,12 +102,6 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
     })
 }
 
-
-
-
-
-
-
     btn1.addEventListener('click', function () {
         if (questions[step].choices[0] !== questions[step].answer) {
             time = time - 15
@@ -155,7 +136,7 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
 
     function refresh () {
         if (step === 0) {
-            end()
+            endGame()
         } else {
             questionEl.textContent = questions[step].title
             btn1.textContent = questions[step].choices[0]
@@ -165,8 +146,9 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
         }
     }
 
-
-
+function endGame () {
+    
+}
 
 function timer () {
     timer = setInterval(function() {
