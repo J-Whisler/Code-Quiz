@@ -9,6 +9,7 @@ var answerTextEl = document.querySelector('#answer-text')
 
 var time = 75;
 var step = 0;
+var finalScore = 0;
 
 var btn1 = document.querySelector('#btn1')
 var btn2 = document.querySelector('#btn2')
@@ -85,7 +86,7 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
             
 
         }
-        if(step === questions.length) {
+        if(step > questions.length) {
             clearInterval (timer);
             score = time;
             alert('Your Score is ' + score);
@@ -99,8 +100,12 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
           }
 
         }
+        
+        
     })
+
 }
+
 
     btn1.addEventListener('click', function () {
         if (questions[step].choices[0] !== questions[step].answer) {
@@ -147,7 +152,10 @@ for (var i = 0; i < answerBtnsEl.length; i++) {
     }
 
 function endGame () {
-    
+    finalScore = time
+    localStorage.setItem('final score', JSON.stringify(finalScore))
+   
+    alert('The quiz is now over.  Your final score is: ' + finalScore)
 }
 
 function timer () {

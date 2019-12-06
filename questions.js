@@ -44,14 +44,14 @@ var questions = [
     },
 
     {
-        title: 'How would you declare a variable (ES5)?',
+        title: 'What is the proper way to indicate that this is a Javascript file?',
         choices: [
-             'myVariable = "This is my variable"',
-             'var myVariable = "This is my variable"',
-             'declare myVariable = "This is my variable"',
-             'variable myVariable = "This is my variable"',
+             'script.jv',
+             'scipt.js',
+             'script.ja',
+             'script.jt',
         ],
-        answer: 'var myVariable = "This is my variable"'
+        answer: 'script.js'
     }
 
 ]
